@@ -17,6 +17,10 @@
 		85497C03232C090E00EBEEC0 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85497C02232C090E00EBEEC0 /* GradientView.swift */; };
 		85497C06232C19B500EBEEC0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85497C05232C19B500EBEEC0 /* Constants.swift */; };
 		85497C08232C262900EBEEC0 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85497C07232C262900EBEEC0 /* LoginVC.swift */; };
+		8586EAD6233E8ABA009BBD9B /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8586EAD5233E8ABA009BBD9B /* AuthService.swift */; };
+		85A772EA233FBB7F00500734 /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A772E9233FBB7F00500734 /* UserDataService.swift */; };
+		85C4631A233ECA66008040B6 /* RoundedBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C46319233ECA66008040B6 /* RoundedBtn.swift */; };
+		85C996D8233A4A1000801034 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85C996D7233A4A1000801034 /* CreateAccountVC.swift */; };
 		FB040DB975F5A408283BCF0C /* Pods_Chat_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 600736E7F56F4F19C9248888 /* Pods_Chat_App.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +42,10 @@
 		85497C02232C090E00EBEEC0 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		85497C05232C19B500EBEEC0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		85497C07232C262900EBEEC0 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		8586EAD5233E8ABA009BBD9B /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		85A772E9233FBB7F00500734 /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		85C46319233ECA66008040B6 /* RoundedBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedBtn.swift; sourceTree = "<group>"; };
+		85C996D7233A4A1000801034 /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		85497BE3232BEA1E00EBEEC0 /* Chat-App */ = {
 			isa = PBXGroup;
 			children = (
+				8586EAD4233E8A9D009BBD9B /* Services */,
 				85497C04232C198E00EBEEC0 /* Utitlity */,
 				85497BFD232BFAA400EBEEC0 /* Model */,
 				85497BFC232BFA9A00EBEEC0 /* View */,
@@ -111,6 +120,7 @@
 				85497BFE232BFAD600EBEEC0 /* ChatVC.swift */,
 				85497C00232BFAE600EBEEC0 /* ChannelVC.swift */,
 				85497C07232C262900EBEEC0 /* LoginVC.swift */,
+				85C996D7233A4A1000801034 /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				85497C02232C090E00EBEEC0 /* GradientView.swift */,
+				85C46319233ECA66008040B6 /* RoundedBtn.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -136,6 +147,15 @@
 				85497C05232C19B500EBEEC0 /* Constants.swift */,
 			);
 			path = Utitlity;
+			sourceTree = "<group>";
+		};
+		8586EAD4233E8A9D009BBD9B /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				8586EAD5233E8ABA009BBD9B /* AuthService.swift */,
+				85A772E9233FBB7F00500734 /* UserDataService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 		E119673CAB7AB3A3EF89AA93 /* Pods */ = {
@@ -268,6 +288,10 @@
 			files = (
 				85497C01232BFAE600EBEEC0 /* ChannelVC.swift in Sources */,
 				85497BFF232BFAD600EBEEC0 /* ChatVC.swift in Sources */,
+				85C4631A233ECA66008040B6 /* RoundedBtn.swift in Sources */,
+				85A772EA233FBB7F00500734 /* UserDataService.swift in Sources */,
+				85C996D8233A4A1000801034 /* CreateAccountVC.swift in Sources */,
+				8586EAD6233E8ABA009BBD9B /* AuthService.swift in Sources */,
 				85497C08232C262900EBEEC0 /* LoginVC.swift in Sources */,
 				85497C03232C090E00EBEEC0 /* GradientView.swift in Sources */,
 				85497BE5232BEA1E00EBEEC0 /* AppDelegate.swift in Sources */,
