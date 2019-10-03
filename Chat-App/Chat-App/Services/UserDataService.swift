@@ -28,4 +28,52 @@ class UserDataService{
     func setAvatarName(avatarName: String)  {
         self.avatarName = avatarName
     }
+    
+    func returnUIColor(components : String) -> UIColor{
+        // "[0.16862745098039217, 0.984313725490196, 0.6274509803921569, 1]"
+        let scanner = Scanner(string: components)
+        let skipped = CharacterSet(charactersIn: "[], ")
+        let comma =  CharacterSet(charactersIn: ",")
+        
+        scanner.charactersToBeSkipped = skipped
+        
+        var r,g,b,a :NSString?
+        
+        //scanning
+        scanner.scanUpToCharacters(from: comma, into: &r)
+        scanner.scanUpToCharacters(from: comma, into: &g)
+        scanner.scanUpToCharacters(from: comma, into: &b)
+        scanner.scanUpToCharacters(from: comma, into: &a)
+        
+        let defaultColor = UIColor.lightGray
+        
+        //unwrapping
+        guard let rUnWrapped = r else {return defaultColor}
+        guard let gUnWrapped = g else {return defaultColor}
+        guard let bUnWrapped = b else {return defaultColor}
+        guard let aUnWrapped = a else {return defaultColor}
+
+
+        //conversion to CGFloat
+        let rFloat = CGFloat(rUnWrapped.doubleValue)
+        let gFloat = CGFloat(gUnWrapped.doubleValue)
+        let bFloat = CGFloat(bUnWrapped.doubleValue)
+        let aFloat = CGFloat(aUnWrapped.doubleValue)
+
+        
+        let newColor = UIColor(red: rFloat, green: gFloat, blue: bFloat, alpha: aFloat)
+        return newColor
+    }
+    
+    func logoutUser()  {
+        id = ""
+        name = ""
+        email = ""
+        avatarName = ""
+        avatarColor = ""
+        AuthServise.instance.isLoggedIn = false
+        AuthServise.instance.authToken = ""
+        AuthServise.instance.userEmail = ""
+        MessageService.instance.clearChannels()
+    }
 }
